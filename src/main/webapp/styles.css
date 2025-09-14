@@ -1,0 +1,158 @@
+/* Paleta */
+:root{
+  --bg:#F5E0D5;     /* fundo bege */
+  --sand:#B59F7B;   /* topbar */
+  --camel:#7B5C32;  /* marrom claro */
+  --brown:#36250A;  /* marrom escuro */
+  --brick:#B55D51;  /* cards vermelhos */
+  --text:#1e1b16;
+  --white:#ffffff;
+  --shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+*{box-sizing:border-box}
+html{font-size:16px}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans";
+  color:var(--text);
+  background:var(--bg);
+}
+
+/* Layout base */
+.container{ width:min(1100px,92vw); margin-inline:auto; }
+
+/* NAVBAR */
+.topbar{ background:var(--sand); border-bottom:1px solid rgba(0,0,0,.06); position:sticky; top:0; z-index:10; }
+.nav{ display:flex; align-items:center; gap:1rem; padding:.75rem 0; }
+.brand .grape{ font-size:1.25rem; }
+.menu{ display:flex; gap:1rem; margin-left:.5rem; flex:1; }
+.menu-link{
+  text-decoration:none; color:#2b2419; padding:.4rem .7rem; border-radius:999px;
+  background:transparent; transition:.2s ease; font-size:.95rem;
+}
+.menu-link:hover{ background:rgba(0,0,0,.06) }
+.menu-link.active{ background:var(--white); border:1px solid rgba(0,0,0,.08); }
+.auth{ display:flex; gap:.5rem; }
+.btn{
+  font:inherit; text-decoration:none; border-radius:.5rem; padding:.5rem .9rem; display:inline-flex;
+  align-items:center; gap:.5rem; border:1px solid transparent; cursor:pointer; transition:.2s ease;
+}
+.btn-light{ background:var(--white); border-color:rgba(0,0,0,.1); }
+.btn-dark{ background:var(--brown); color:var(--white); }
+.btn-primary{ background:var(--brick); color:var(--white); box-shadow:var(--shadow); }
+.btn-ghost{ background:var(--brown); color:var(--white); }
+.btn:hover{ transform:translateY(-1px); }
+
+/* HERO */
+.hero{ background:var(--bg); }
+.hero-inner{ text-align:center; padding: clamp(2rem, 6vw, 4rem) 0 2rem; }
+.title{ margin:0; font-size:clamp(2rem,5vw,3.2rem); line-height:1.15; color:#2b1f0f; font-weight:800; }
+.subtitle{ margin:.5rem 0 1rem; font-size:1.125rem; color:#624b2b; }
+.cta{ display:flex; gap:.75rem; justify-content:center }
+
+/* BANNER HOME */
+.banner{ background:linear-gradient(#eee,#e6e6e6); border-top:1px solid rgba(0,0,0,.05); border-bottom:1px solid rgba(0,0,0,.05); }
+.image-placeholder{
+  height:360px; margin:1.2rem 0 2rem; background:#e1e1e1; border-radius:1rem; display:grid; place-items:center;
+  outline:3px dashed rgba(0,0,0,.1);
+}
+.image-icon{ font-size:3rem; opacity:.25 }
+
+/* REVIEWS HOME */
+.reviews{ padding:2rem 0 3rem; background:var(--bg); }
+.reviews-title{ font-size:1.1rem; margin:0 0 1rem; }
+.grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; }
+.card{
+  background:var(--brick); color:var(--white); border-radius:.75rem; padding:1rem; box-shadow:var(--shadow);
+  min-height:132px; display:flex; flex-direction:column; justify-content:space-between;
+}
+.card-text{ margin:0 0 .75rem; line-height:1.4; }
+.card-user{ display:flex; align-items:center; gap:.6rem; opacity:.95; }
+.avatar{ width:28px; height:28px; border-radius:50%; border:2px solid rgba(255,255,255,.65); }
+.username{ font-weight:600; font-size:.95rem; }
+
+/* FOOTER */
+.footer{ padding:1.2rem 0 2rem; color:#5b4a34; }
+
+/* ======= PÁGINA SELEÇÃO ======= */
+
+/* Chips (Mensal/Anual) centralizados */
+.billing{ display:flex; gap:.5rem; justify-content:center; margin:1rem auto 0; }
+.chip{
+  border:1px solid rgba(0,0,0,.15); background:#eee3d9; padding:.4rem .7rem; border-radius:999px;
+  cursor:pointer; font-size:.9rem;
+}
+.chip-active{ background:var(--sand); }
+
+/* Cards de preço lado a lado */
+.pricing{ display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin:1.2rem auto 2rem; }
+.plan{
+  border-radius:.75rem; padding:1.25rem; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:1rem;
+}
+.plan-light{ background:#f3e6d9; border:1px solid rgba(0,0,0,.06); }
+.plan-dark{ background:var(--brown); color:var(--white); }
+.plan-title{ margin:0; font-size:1.25rem; }
+.price-wrap{ display:flex; align-items:baseline; gap:.2rem; }
+.currency{ font-weight:700; }
+.price{ font-size:2.8rem; font-weight:800; line-height:1; }
+.per{ opacity:.8; margin-left:.1rem; }
+.features{ margin:0; padding-left:1.1rem; line-height:1.5; }
+.btn-brown{ background:var(--brown); color:#fff; }
+.full{ width:100%; }
+
+/* FAQ / Accordion */
+.faq{ padding-bottom:2rem; }
+.accordion{ max-width:740px; margin:.5rem auto 2.5rem; }
+.acc-head{
+  width:100%; text-align:left; padding:.9rem 1rem; border-radius:.5rem;
+  border:1px solid rgba(0,0,0,.12); background:#eee3d9; cursor:pointer; position:relative;
+}
+.acc-head::after{ content:"▾"; position:absolute; right:12px; top:50%; transform:translateY(-50%); }
+.acc-head.open::after{ content:"▴"; }
+.acc-body{
+  background:#fff; border:1px solid rgba(0,0,0,.12); border-top:none; border-radius:0 0 .5rem .5rem;
+  overflow:hidden; max-height:0; transition:max-height .25s ease; padding:0 1rem;
+}
+.acc-body p{ margin:.9rem 0; }
+
+/* Responsividade */
+@media (max-width: 960px){
+  .grid{ grid-template-columns:repeat(2,1fr); }
+  .pricing{ grid-template-columns:1fr; }
+}
+@media (max-width: 560px){
+  .menu{ display:none }
+  .grid{ grid-template-columns:1fr; }
+  .image-placeholder{ height:240px; }
+}
+
+/* LOGIN */
+.login{ padding:2rem 0 4rem; }
+.login-box{
+  max-width:360px; margin:1.5rem auto 0;
+  background:var(--sand); padding:1.5rem; border-radius:.75rem; box-shadow:var(--shadow);
+  display:flex; flex-direction:column; gap:.9rem;
+}
+.login-box label{ font-size:.9rem; font-weight:600; }
+.login-box input{
+  padding:.6rem .7rem; border-radius:.4rem; border:1px solid rgba(0,0,0,.15); font-size:1rem;
+}
+.login-box input:focus{ outline:2px solid var(--camel); }
+.extra-links{ text-align:left; font-size:.85rem; margin-top:.5rem; }
+.extra-links a{ color:#2c2010; text-decoration:none; }
+.extra-links a:hover{ text-decoration:underline; }
+
+/* Páginas de formulário (Login / Registrar) */
+.form-page{ padding:2rem 0 4rem; }
+.form-box{
+  max-width:460px; margin:1.5rem auto 0;
+  background:var(--sand); padding:1.5rem; border-radius:.75rem; box-shadow:var(--shadow);
+  display:flex; flex-direction:column; gap:.9rem;
+}
+.form-box label{ font-size:.9rem; font-weight:600; }
+.form-box input{
+  padding:.6rem .7rem; border:1px solid rgba(0,0,0,.15); border-radius:.4rem; font-size:1rem;
+}
+.form-box input:focus{ outline:2px solid var(--camel); }
+
