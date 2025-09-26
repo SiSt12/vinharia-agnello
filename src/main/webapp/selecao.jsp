@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <title>Seleção Agnello — Vinharia Agnello</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍇</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,9 +19,9 @@
       <div class="brand"><span class="grape">🍇</span></div>
       <nav class="menu">
         <a href="index.jsp" class="menu-link">Sobre nós</a>
-        <a href="#" class="menu-link">Produtos</a>
-        <a href="#" class="menu-link">Carrinho</a>
-        <a href="#" class="menu-link">Sommelier Virtual</a>
+        <a href="produtos.jsp" class="menu-link">Produtos</a>
+        <a href="carrinho.jsp" class="menu-link">Carrinho</a>
+        <a href="sommeliervirtual.jsp" class="menu-link">Sommelier Virtual</a>
       </nav>
       <div class="auth">
         <a class="btn btn-light" href="login.jsp">Login</a>
@@ -77,16 +81,25 @@
     <h2 class="reviews-title" style="text-align:center;margin-top:1rem;">FAQ</h2>
 
     <div class="accordion">
-      <button class="acc-head">Title</button>
+      <button class="acc-head">Como funciona a Seleção Agnello?</button>
       <div class="acc-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat rutrum eleifend. Praesent ultricies mauris id tortor bibendum, et dictum.</p>
+        <p>A Seleção Agnello é nosso clube de assinatura de vinhos. Todo mês, você recebe em casa uma ou mais garrafas de vinhos selecionados por nossa equipe de especialistas, dependendo do plano escolhido. É a forma mais fácil de descobrir novos rótulos com total comodidade.</p>
       </div>
 
-      <button class="acc-head">Title</button>
-      <div class="acc-body"><p>Conteúdo do item 2.</p></div>
+      <button class="acc-head">Qual a diferença entre os planos Agnello e Agnello Pro?</button>
+      <div class="acc-body">
+        <p>O plano <strong>Agnello</strong> é ideal para quem está começando a explorar o mundo dos vinhos, com o envio de 1 garrafa surpresa por mês. Já o plano <strong>Agnello Pro</strong> é para os entusiastas: você recebe 2 garrafas, pode escolher o tipo de vinho que prefere receber e ainda acumula pontos para trocar por descontos em nossa loja.</p>
+      </div>
 
-      <button class="acc-head">Title</button>
-      <div class="acc-body"><p>Conteúdo do item 3.</p></div>
+      <button class="acc-head">Como funciona o desconto do plano anual?</button>
+      <div class="acc-body">
+        <p>Ao optar pelo plano anual, você realiza um pagamento único que cobre 12 meses de assinatura. Como recompensa pela sua fidelidade, nós oferecemos um desconto de 20% sobre o valor total que você pagaria no plano mensal, tornando sua experiência ainda mais vantajosa.</p>
+      </div>
+
+      <button class="acc-head">Posso cancelar quando quiser?</button>
+      <div class="acc-body">
+        <p>Sim! Nossos planos mensais não possuem fidelidade e podem ser cancelados a qualquer momento, sem taxas ou multas. Para o plano anual, o cancelamento pode ser solicitado, e as condições de reembolso serão avaliadas com base no tempo restante da assinatura.</p>
+      </div>
     </div>
   </section>
 
